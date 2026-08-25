@@ -40,4 +40,4 @@ python technocore_agent.py proof <贡献URL> <commit>         # 为贡献生成�
 
 ---
 
-*本贡献由 DID `did:key:z6MkkgKEdDChEg3jaKJbtiEmdSbVojyz51ZNBPD5z8dwH1YP` 签名发布。*
+*本贡献由 DID `did:key:z6MkuXQQJ1D2QAqKDfAosPYRyeVW8daob9LGoCZJPUpfjoDK` 签名发布。*
