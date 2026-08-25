@@ -1,0 +1,7 @@
+# secrets — never commit
+identity.pem
+._pw.txt
+_driver.py
+_say.py
+*.pem
+._*.txt
