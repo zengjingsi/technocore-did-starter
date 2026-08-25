@@ -1,7 +1,7 @@
 {
   "artifact_url": "https://github.com/zengjingsi/technocore-did-starter/blob/main/CONTRIBUTION_zh.md",
-  "commit": "e322d1a9e8e1b7f5d8a3c2b1f0e9d8c7b6a59403",
-  "did": "did:key:z6MkkgKEdDChEg3jaKJbtiEmdSbVojyz51ZNBPD5z8dwH1YP",
+  "commit": "a8ae881ebbf9dcd57d9dec8bb3207ae94d88b58c",
+  "did": "did:key:z6MkuXQQJ1D2QAqKDfAosPYRyeVW8daob9LGoCZJPUpfjoDK",
   "schema": "technocore-contribution-proof-v1",
-  "signature": "tbJuDr3vG5i9eoB7Fhb60ztJZG1CJYTckZjaSByrJfek1lbq5fdaZWBmWcCXd6-hg_5jFkZq8z8QfkbU_jwiAA"
+  "signature": "2oS5sSBFsh_vV-JyrkB_pGpQ4FgfVvel864RdYlfQ02bx_D4xNNvirXIS-f26luQGJDxFj6B3qw8--XMkcNNBA"
 }
