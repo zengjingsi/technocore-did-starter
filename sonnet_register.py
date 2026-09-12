@@ -25,7 +25,14 @@ DID = "did:key:z6MkuXQQJ1D2QAqKDfAosPYRyeVW8daob9LGoCZJPUpfjoDK"
 
 
 def already_accepted() -> bool:
-    """Check if referee has issued an accepted receipt for our DID/request_id."""
+    """Check local state file first, then referee receipts in the room."""
+    state = HERE / "_reg_state.json"
+    if state.exists():
+        try:
+            if json.loads(state.read_text()).get("accepted"):
+                return True
+        except Exception:
+            pass
     try:
         r = tca.read_room(ROOM, limit=200)
         for m in r.get("messages", []):
@@ -34,7 +41,8 @@ def already_accepted() -> bool:
                 if REQUEST_ID in t or DID in t:
                     try:
                         o = json.loads(t)
-                        if o.get("reason") in ("accepted", "ok", "registered"):
+                        if o.get("status") == "accepted":
+                            state.write_text(json.dumps({"accepted": True, "seq": m.get("seq"), "role": o.get("role")}))
                             return True
                     except Exception:
                         pass
@@ -47,7 +55,7 @@ def register_once() -> None:
     reg = {
         "type": "sonnet.register.v1",
         "contest_id": "sonnet-2",
-        "role": "voter",
+        "role": "organizer",
         "request_id": REQUEST_ID,
     }
     text = json.dumps(reg, ensure_ascii=False, separators=(",", ":"))
